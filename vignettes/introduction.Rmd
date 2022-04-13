@@ -49,6 +49,13 @@ show_moron_pal("ledzep",6)
 
 show_moron_pal("ledzep",9)
 
+show_moron_pal("SgtPepper",9)
+
+show_moron_pal("SgtPepper",12)
+
+#palette inspired by a nice H&E image
+show_moron_pal("HandE",12)
+
 ```
 
 
