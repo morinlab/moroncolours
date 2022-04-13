@@ -1,0 +1,79 @@
+---
+title: "test"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{test}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+```{r setup}
+library(moroncolours)
+```
+
+## Existing palettes
+
+Use the function `list_moron_pal` to get the names of all available palettes. Depending on how many are available, you can show the only (or your desired) palette size.
+
+```{r,warning=F}
+library(moroncolours)
+
+list_moron_pal()
+
+show_moron_pal("ledzep")
+
+show_moron_pal("ledzep",6)
+
+show_moron_pal("ledzep",9)
+
+show_moron_pal("SgtPepper",9)
+
+show_moron_pal("SgtPepper",12)
+
+#palette inspired by a nice H&E image
+show_moron_pal("HandE",12)
+
+```
+
+
+## Inspirations for palettes
+
+Each palette is named after the image that inspired it. Below you will see some example images that were used to inspire the existing palettes.  
+
+```{r}
+library(imager)
+im <- load.image(system.file('extdata/ledzep.jpg',package='moroncolours'))
+plot(im, axes=FALSE)
+```
+
+## Making your own palettes
+
+You can use the bundled inspirations or point the image_to_palette function to any image file to create new palettes on the fly. The example below uses two bundled images to create new palettes inspired by Aladdin and Frozen.
+
+```{r}
+#create a palette from the colours common in the Aladdin film
+al_file = system.file('extdata/aladdin.jpg',package='moroncolours')
+al_pal_16 = image_to_palette(al_file,16)
+# new palette is automatically shown along with the corresponding hex codes
+fr_file = system.file('extdata/frozen.jpg',package='moroncolours')
+fr_pal_9 = image_to_palette(fr_file,9)
+
+```
+
+## Saving palettes permanently
+
+Assuming we like these new palettes, then why not become a contributor to this package and add your new palette to it? This is a cinch to do. 
+
+```{r,eval=F}
+save_moron_pal(fr_pal_9,palette_name = "frozen",num_col = 9)
+#this is not run in the vignette because it only works if run outside a markdown environment
+
+```
+
