@@ -1,13 +1,13 @@
 Package: moroncolours
 Type: Package
-Title: What the Package Does (Title Case)
+Title: Generate and provide custom palettes (Title Case)
 Version: 0.1.0
-Author: Who wrote it
-Maintainer: The package maintainer <yourself@somewhere.net>
-Description: More about what it does (maybe more than one line)
-    Use four spaces when indenting paragraphs within the Description.
+Author: Ryan Morin
+Maintainer: Ryan Morin <rdmorin@sfu.ca>
+Description: Take images and extract representative colour palettes using paletter.
+    Provide these palettes for future use by others in the lab. 
 License: What license is it under?
 Encoding: UTF-8
 LazyData: true
-Depends: 
-    R (>= 2.10)
+Depends: R (>= 2.10),  dplyr, scales, jpeg
+RoxygenNote: 7.1.1
