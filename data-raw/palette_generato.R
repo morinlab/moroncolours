@@ -92,3 +92,6 @@ pepper_image = system.file("extdata", "SgtPepper.jpg", package="moroncolours")
 sgt_pepper_9 = image_to_palette(pepper_image,9)
 led_zep_image = system.file("extdata","ledzep.jpg",package="moroncolours")
 save_moron_pal(led_zep_6,"ledzep",6)
+
+mm = moroncolours::image_to_palette(system.file("extdata/warhol.jpg",package="moroncolours"),num_col = 16)
+save_moron_pal(mm,"warhol",16)
