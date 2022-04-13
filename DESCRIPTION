@@ -12,3 +12,7 @@ LazyData: true
 Depends: R (>= 2.10),  dplyr, scales, jpeg, paletter, imager
 Remotes: AndreaCirilloAC/paletter
 RoxygenNote: 7.1.1
+Suggests: 
+    rmarkdown,
+    knitr
+VignetteBuilder: knitr
