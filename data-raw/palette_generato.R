@@ -95,3 +95,9 @@ save_moron_pal(led_zep_6,"ledzep",6)
 
 mm = moroncolours::image_to_palette(system.file("extdata/warhol.jpg",package="moroncolours"),num_col = 16)
 save_moron_pal(mm,"warhol",16)
+
+doctor = moroncolours::image_to_palette(system.file("extdata/doctorwho.jpg",package="moroncolours"),12)
+save_moron_pal(doctor,"doctorwho",12)
+doctor = moroncolours::image_to_palette(system.file("extdata/doctorwho.jpg",package="moroncolours"),16)
+save_moron_pal(doctor,"doctorwho",16)
+
