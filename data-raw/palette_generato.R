@@ -100,4 +100,10 @@ doctor = moroncolours::image_to_palette(system.file("extdata/doctorwho.jpg",pack
 save_moron_pal(doctor,"doctorwho",12)
 doctor = moroncolours::image_to_palette(system.file("extdata/doctorwho.jpg",package="moroncolours"),16)
 save_moron_pal(doctor,"doctorwho",16)
+al_file = system.file('extdata/easteregg.jpg',package='moroncolours')
+al_pal_24 = moroncolours::image_to_palette(al_file,24)
+moroncolours::save_moron_pal(al_pal_24,palette_name = "easter",num_col = 24)
+al_file = system.file('extdata/ponyo.jpg',package='moroncolours')
+al_pal_12 = image_to_palette(al_file,12)
+save_moron_pal(al_pal_12,palette_name = "easter",num_col = 12)
 
