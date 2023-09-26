@@ -113,7 +113,7 @@ save_moron_pal = function(palette_colours,palette_name,num_col){
   #check that the palette name isn't already taken
   if(get_moron_pal(palette_name,num_col) == 0){
     message("saving",palette_name,num_col)
-    moron_db[[palette_name]][[num_col]]=palette_colours
+    moron_db[[palette_name]][[num_col]] <<- palette_colours
     save(moron_db, file = "R/sysdata.rda")
     usethis::use_data(moron_db,overwrite = TRUE)
     

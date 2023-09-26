@@ -128,6 +128,6 @@ al_file = system.file('extdata/picasso.jpeg',package='moroncolours')
 al_pal_16 = moroncolours::image_to_palette(al_file,num_col=16)
 save_moron_pal(al_pal_16,palette_name = "picasso",num_col = 16)
 
-#save(moron_db, file = "R/sysdata.rda")
+save(moron_db, file = "R/sysdata.rda")
 
-#usethis::use_data(moron_db,overwrite = TRUE)
+usethis::use_data(moron_db,overwrite = TRUE)
