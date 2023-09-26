@@ -47,8 +47,12 @@ show_moron_pal = function(palette_name,num_col){
   available = moron_db[[palette_name]]
   if(length(available)>1){
     if(missing(num_col)){
+      available_nums = as.numeric(names(available))
+      max_num = available_nums[which.max(available_nums)]
+      message(paste("defaulting to"),max_num)
       message("provide a number of colours from the available options:")
       message(cat(names(available)[order(as.numeric(names(available)))],sep=","))
+      show_col(unlist(moron_db[[palette_name]][[as.character(max_num)]]))
     }else{
       show_col(unlist(moron_db[[palette_name]][[as.character(num_col)]]))
     }
@@ -68,8 +72,16 @@ show_moron_pal = function(palette_name,num_col){
 #'
 #' @examples
 get_moron_pal = function(palette_name,num_col){
-  num_col = as.character(num_col)
+  
+  available = moron_db[[palette_name]]
   if(length(moron_db[[palette_name]])){
+    if(missing(num_col)){
+      available_nums = as.numeric(names(available))
+      max_num = as.character(available_nums[which.max(available_nums)])
+      message(paste("defaulting to:",max_num))
+      return(moron_db[[palette_name]][[max_num]])
+    }
+    num_col = as.character(num_col)
     if(length(moron_db[[palette_name]][[num_col]])){
       return(moron_db[[palette_name]][[num_col]])
     }else{
