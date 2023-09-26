@@ -84,9 +84,6 @@ moron_db$"b-cell"$"all" =  c(
   "UNSPECIFIED"="#cfba7c"
 )
 
-save(moron_db, file = "R/sysdata.rda")
-
-usethis::use_data(moron_db,overwrite = TRUE)
 
 pepper_image = system.file("extdata", "SgtPepper.jpg", package="moroncolours")
 sgt_pepper_9 = image_to_palette(pepper_image,9)
@@ -98,12 +95,30 @@ save_moron_pal(mm,"warhol",16)
 
 doctor = moroncolours::image_to_palette(system.file("extdata/doctorwho.jpg",package="moroncolours"),12)
 save_moron_pal(doctor,"doctorwho",12)
+
 doctor = moroncolours::image_to_palette(system.file("extdata/doctorwho.jpg",package="moroncolours"),16)
 save_moron_pal(doctor,"doctorwho",16)
+
+
+
 al_file = system.file('extdata/easteregg.jpg',package='moroncolours')
 al_pal_24 = moroncolours::image_to_palette(al_file,24)
-moroncolours::save_moron_pal(al_pal_24,palette_name = "easter",num_col = 24)
+moroncolours::save_moron_pal(al_pal_24,palette_name = "easteregg",num_col = 24)
+
 al_file = system.file('extdata/ponyo.jpg',package='moroncolours')
 al_pal_12 = image_to_palette(al_file,12)
-save_moron_pal(al_pal_12,palette_name = "easter",num_col = 12)
+save_moron_pal(al_pal_12,palette_name = "ponyo",num_col = 12)
 
+
+al_file = system.file('extdata/uprising.jpg',package='moroncolours')
+al_pal_12 = moroncolours::image_to_palette(al_file,num_col=12)
+save_moron_pal(al_pal_12,palette_name = "bobmarley",num_col = 12)
+
+al_pal_16 = moroncolours::image_to_palette(al_file,num_col=16)
+save_moron_pal(al_pal_16,palette_name = "bobmarley",num_col = 16)
+
+
+
+#save(moron_db, file = "R/sysdata.rda")
+
+#usethis::use_data(moron_db,overwrite = TRUE)
