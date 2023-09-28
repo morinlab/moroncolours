@@ -87,8 +87,14 @@ moron_db$"b-cell"$"all" =  c(
 
 pepper_image = system.file("extdata", "SgtPepper.jpg", package="moroncolours")
 sgt_pepper_9 = image_to_palette(pepper_image,9)
+
 led_zep_image = system.file("extdata","ledzep.jpg",package="moroncolours")
-save_moron_pal(led_zep_6,"ledzep",6)
+led_zep_9 = image_to_palette(led_zep_image,9)
+save_moron_pal(led_zep_9,"ledzep",9)
+
+led_zep_16 = image_to_palette(led_zep_image,16)
+save_moron_pal(led_zep_16,"ledzep",16)
+
 
 mm = moroncolours::image_to_palette(system.file("extdata/warhol.jpg",package="moroncolours"),num_col = 16)
 save_moron_pal(mm,"warhol",16)
